@@ -1,16 +1,29 @@
-﻿// Задача 22: Напишите программу, которая
-// принимает на вход число (N) и выдаёт таблицу
-// квадратов чисел от 1 до N.
-// 5 -> 1, 4, 9, 16, 25.
-// 2 -> 1,4
+﻿// 17. Напишите программу, которая принимает на вход
+// координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт
+// номер четверти плоскости, в которой находится эта
+// точка.
 
-Console.WriteLine("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координаты точки");
+Console.Write("X: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.Write("Y: ");
+int y = Convert.ToInt32(Console.ReadLine());
 
-int count = 1;
+int quarter = Quarter (x, y);
+Console.WriteLine(quarter);
 
-while (count <= num) 
+// int quarter = Quarter(x, y);
+// string result = quarter > 0 ? $"Указанные координаты сответствуют четверти -> {quarter}"
+//                             : "Введены некоррктные координаты";
+// Console.WriteLine(result);
+
+
+
+int Quarter (int xc, int yc)
     {
-        Console.WriteLine($"{count} -> {count*count}");
-        count++;
+    if (xc >0 && yc > 0) return 1;
+    if (xc <0 && yc > 0) return 2;
+    if (xc <0 && yc < 0) return 3;
+    if (xc >0 && yc < 0) return 4;
+    return 0;
     }

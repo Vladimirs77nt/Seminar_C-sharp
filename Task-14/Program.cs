@@ -1,29 +1,24 @@
-﻿// 17. Напишите программу, которая принимает на вход
-// координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт
-// номер четверти плоскости, в которой находится эта
-// точка.
+﻿// 14. Напишите программу, которая принимает на
+// вход число и проверяет, кратно ли оно
+// одновременно 7 и 23.
+// 14 -> нет
+// 46 -> нет
+// 161 -> да
 
-Console.WriteLine("Введите координаты точки");
-Console.Write("X: ");
-int x = Convert.ToInt32(Console.ReadLine());
-Console.Write("Y: ");
-int y = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
 
-int quarter = Quarter (x, y);
-Console.WriteLine(quarter);
+// bool Remains (int number_A, int number_B)
+//     {
+//     int res = number_A % number_B;
+//     if (res == 0) return true;
+//     else return false;
+//     }
 
-// int quarter = Quarter(x, y);
-// string result = quarter > 0 ? $"Указанные координаты сответствуют четверти -> {quarter}"
-//                             : "Введены некоррктные координаты";
-// Console.WriteLine(result);
-
-
-
-int Quarter (int xc, int yc)
+bool Remains (int number_A, int number_B)
     {
-    if (xc >0 && yc > 0) return 1;
-    if (xc <0 && yc > 0) return 2;
-    if (xc <0 && yc < 0) return 3;
-    if (xc >0 && yc < 0) return 4;
-    return 0;
+    return number_A % number_B == 0;
     }
+
+    if (Remains (a, 7) && Remains (a, 23)) Console.WriteLine ("Да");
+    else Console.WriteLine ("Нет");

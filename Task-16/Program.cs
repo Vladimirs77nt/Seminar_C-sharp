@@ -1,27 +1,21 @@
-﻿// Задача 20: Напишите программу, которая
-// принимает на вход координаты двух точек и
-// находит расстояние между ними в 2D
-// пространстве.
-// A (3,6); B (2,1) -> 5,09
-// A (7,-5); B (1,-1) -> 7,21
+﻿// 16. Напишите программу, которая принимает на
+// вход два числа и проверяет, является ли одно
+// число квадратом другого.
+// 5, 25 -> да
+// -4, 16 -> да
+// 25, 5 -> да
+// 8,9 -> нет
 
-Console.WriteLine("Введите координаты первой точки");
-Console.Write("X1: ");
-int x1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Y1: ");
-int y1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите первое число: ");
+int a = Convert.ToInt32(Console.ReadLine());
 
+Console.WriteLine("Введите второе число: ");
+int b = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите координаты второй точки");
-Console.Write("X2: ");
-int x2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Y2: ");
-int y2 = Convert.ToInt32(Console.ReadLine());
+bool Quatro (int a, int b)
+    {
+    return (a == b*b || b == a*a);
+    }
 
-double Distans (int xc1, int yc1, int xc2, int yc2)
-{ 
-    double res = Math.Sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
-    return res;
-}
-
-Console.WriteLine(Math.Round(Distans(x1,x2,y1,y2),2));
+if (Quatro (a, b)) Console.WriteLine ("Да");
+else Console.WriteLine ("Нет");

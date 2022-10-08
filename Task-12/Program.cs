@@ -1,24 +1,30 @@
-﻿// 14. Напишите программу, которая принимает на
-// вход число и проверяет, кратно ли оно
-// одновременно 7 и 23.
-// 14 -> нет
-// 46 -> нет
-// 161 -> да
+﻿// 12. Напишите программу, которая будет принимать на
+// вход два числа и выводить, является ли второе число
+// кратным первому. Если число 2 не кратно числу 1, то
+// программа выводит остаток от деления.
+// 34, 5 -> не кратно, остаток 4
+// 16, 4 -> кратно
 
-Console.WriteLine("Введите число: ");
+Console.WriteLine("Введите первое число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
-// bool Remains (int number_A, int number_B)
-//     {
+Console.WriteLine("Введите второе число: ");
+int b = Convert.ToInt32(Console.ReadLine());
+
+int remains = a % b ;
+
+if (remains == 0)
+    Console.WriteLine ("кратно");
+else Console.WriteLine ($"не кратно, {(remains)}");
+
+// bool Multiplicity(int number_A, int number_B);
+// {
+//     bool Flag = default;
 //     int res = number_A % number_B;
-//     if (res == 0) return true;
-//     else return false;
-//     }
+//     if (res == 0) Flag = True
+//     else Flag = False;
+//     return Flag;
+// }
 
-bool Remains (int number_A, int number_B)
-    {
-    return number_A % number_B == 0;
-    }
-
-    if (Remains (a, 7) && Remains (a, 23)) Console.WriteLine ("Да");
-    else Console.WriteLine ("Нет");
+// if (Flag == true) Console.WriteLine ("кратно")
+// else Console.WriteLine ($"не кратно, {(remains)}");
