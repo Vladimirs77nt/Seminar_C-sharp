@@ -14,12 +14,12 @@ if (number > 9999 && number < 100000)
 else Console.WriteLine ("ошибка, введено неверное число");
 
 int Palinodrom (int num)
-    {
-    int digit5 = num % 10; // 12345 % 10 = 5
-    int digit4 = num/10 % 10; // 1234 % 10 = 4
-    int digit3 = num/100 % 10; // 123 % 10 = 3
+    {                           // num = 12345
+    int digit1 = num/10000;     // 1 = 1
     int digit2 = num/1000 % 10; // 12 % 10 = 2
-    int digit1 = num/10000; // 1 = 1
+    int digit3 = num/100 % 10;  // 123 % 10 = 3
+    int digit4 = num/10 % 10;   // 1234 % 10 = 4
+    int digit5 = num % 10;      // 12345 % 10 = 5
     int palinodrom = digit5*10000+digit4*1000+digit3*100+digit2*10+digit1;
     return palinodrom;
     };
