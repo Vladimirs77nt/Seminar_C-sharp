@@ -1,30 +1,20 @@
-﻿// 12. Напишите программу, которая будет принимать на
-// вход два числа и выводить, является ли второе число
-// кратным первому. Если число 2 не кратно числу 1, то
-// программа выводит остаток от деления.
-// 34, 5 -> не кратно, остаток 4
-// 16, 4 -> кратно
+﻿// 11. Напишите программу, которая выводит случайное
+// трёхзначное число и удаляет вторую цифру этого
+// числа.
+// 456 -> 46
+// 782 -> 72
+// 918 -> 98
 
-Console.WriteLine("Введите первое число: ");
-int a = Convert.ToInt32(Console.ReadLine());
+int number = new Random().Next(100,1000);
+Console.WriteLine($"Случайное число из диапозона 10 - 999 = {number}");
 
-Console.WriteLine("Введите второе число: ");
-int b = Convert.ToInt32(Console.ReadLine());
+int NumberPrint(int num)
+{
+    int firstDigit = num / 100; // 781 / 100 = 7 первая цифра
+    int thirdDigit = num % 10; // 781 % 10 = 1 третья цифра
 
-int remains = a % b ;
+    return firstDigit * 10 + thirdDigit;
+}
 
-if (remains == 0)
-    Console.WriteLine ("кратно");
-else Console.WriteLine ($"не кратно, {(remains)}");
-
-// bool Multiplicity(int number_A, int number_B);
-// {
-//     bool Flag = default;
-//     int res = number_A % number_B;
-//     if (res == 0) Flag = True
-//     else Flag = False;
-//     return Flag;
-// }
-
-// if (Flag == true) Console.WriteLine ("кратно")
-// else Console.WriteLine ($"не кратно, {(remains)}");
+int result = NumberPrint (number);
+Console.WriteLine ($"{number} -> {result}");
