@@ -22,4 +22,4 @@ int Palinodrom (int num)
     int digit5 = num % 10;      // 12345 % 10 = 5
     int palinodrom = digit5*10000+digit4*1000+digit3*100+digit2*10+digit1;
     return palinodrom;
-    };
+    }

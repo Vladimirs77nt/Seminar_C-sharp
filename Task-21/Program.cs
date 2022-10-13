@@ -27,4 +27,4 @@ double Distans3D (int xc1, int yc1, int zc1, int xc2, int yc2, int zc2)
 { 
     double result = Math.Sqrt(Math.Pow((xc1-xc2),2) + Math.Pow((yc1-yc2),2) + Math.Pow((zc1-zc2),2));
     return result;
-};
+}
