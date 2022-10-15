@@ -34,9 +34,13 @@ int EvenNumbersArray(int[] array) // метод подсчета четных ч
     return count;
 }
 
-Console.Write("Введите размер массива: ");                // просим задать размер массива
-int sizeArray = Convert.ToInt32(Console.ReadLine());      // принимаем на входе размер массива
-int[] arr = CreateArrayRndInt3(sizeArray);                // создаем массив
-PrintArray(arr);                                          // печатаем массив в виде [345, 897, 568, 234]
-int result = EvenNumbersArray(arr);                       // находим кол-во четных чисел в массиве
-Console.WriteLine($" -> {result}");                       // добавляем результат [345, 897, 568, 234] -> 2
+Console.Write("Введите размер массива: ");               // просим задать размер массива
+int sizeArray = Convert.ToInt32(Console.ReadLine());     // принимаем на входе размер массива
+if (sizeArray>0)                                         // проверка массива - чтобы бы был не менее 2 элементов
+{
+int[] arr = CreateArrayRndInt3(sizeArray);               // создаем массив
+PrintArray(arr);                                         // печатаем массив в виде [345, 897, 568, 234]
+int result = EvenNumbersArray(arr);                      // находим кол-во четных чисел в массиве
+Console.WriteLine($" -> {result}");                      // добавляем результат [345, 897, 568, 234] -> 2
+}
+else Console.WriteLine("Ошибка ввода");                  // обработка ошибки ввода
