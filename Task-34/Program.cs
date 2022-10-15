@@ -39,4 +39,4 @@ int sizeArray = Convert.ToInt32(Console.ReadLine());      // принимаем 
 int[] arr = CreateArrayRndInt3(sizeArray);                // создаем массив
 PrintArray(arr);                                          // печатаем массив в виде [345, 897, 568, 234]
 int result = EvenNumbersArray(arr);                       // находим кол-во четных чисел в массиве
-Console.WriteLine($" -> {result}");                       // печатаем в добавление результат [345, 897, 568, 234] -> 2
+Console.WriteLine($" -> {result}");                       // добавляем результат [345, 897, 568, 234] -> 2
