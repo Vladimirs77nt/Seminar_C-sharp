@@ -3,12 +3,12 @@
 // 4 -> 24
 // 5 -> 120
 
-Console.Write ("Введите число: ");
+Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int multNumber = MultNum(number);
 Console.WriteLine($"Произведение чисел от 1 до {number} = {multNumber}");
 
-int MultNum (int a)
+int MultNum(int a)
 {
     int mult_num = 1;
     for (int i = 1; i <= a; i++)
