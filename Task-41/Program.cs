@@ -2,12 +2,12 @@
 // 0, 7, 8, -2, -2 -> 2
 // -1, -7, 567, 89, 223-> 3
 
-int[] InputNumber(int num) // метод консольного ввода чисел от пользователя по заданному кол-ву
+int[] InputNumber(int num)         // метод консольного ввода чисел от пользователя по заданному кол-ву
 {
-    int[] array = new int[num];  // создаем массив заданного размера
+    int[] array = new int[num];    // создаем массив заданного размера
     for (int i = 0; i < num; i++)
     {
-        Console.Write($"Введите {i+1}-ое число: ");
+        Console.Write($"Введите {i + 1}-ое число: ");
         array[i] = Convert.ToInt32(Console.ReadLine());
     }
     return array;  // возвращаемый массив чисел
@@ -20,7 +20,7 @@ int SummInputPositiveNumber(int[] array) // метод подсчета чисе
     {
         if (array[i] > 0) summ++;
     }
-    return summ; // возвращаемое значение
+    return summ;  // возвращаемое значение
 }
 
 Console.Write("Сколько чисел будет введено: ");
