@@ -4,7 +4,7 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-double[,] CreateMatrixRndInt(int rows, int columns, int min, int max) // метод заполнения массива случайными числами
+double[,] CreateMatrixRndInt(int rows, int columns, int min, int max) // метод заполнения массива вещественными числами
 {
     var matrix = new double[rows, columns];
     var rnd = new Random();
@@ -12,7 +12,7 @@ double[,] CreateMatrixRndInt(int rows, int columns, int min, int max) // мет�
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-        matrix[i, j] = Math.Round((rnd.NextDouble() * (max - min) + min), 1); // округление до 1 знака после запятой
+            matrix[i, j] = Math.Round((rnd.NextDouble() * (max - min) + min), 1); // !!! округление до 1 знака после запятой
         }
     }
     return matrix;
@@ -21,16 +21,16 @@ double[,] CreateMatrixRndInt(int rows, int columns, int min, int max) // мет�
 void PrintMatrix(double[,] matrix) // метод печати массива
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
-    {       
+    {
         Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-        if (j<(matrix.GetLength(1) - 1)) Console.Write($"{matrix[i, j], 5}, ");
-            else Console.Write($"{matrix[i, j], 5}");
+            if (j < (matrix.GetLength(1) - 1)) Console.Write($"{matrix[i, j],5}, ");
+            else Console.Write($"{matrix[i, j],5}");
         }
         Console.WriteLine(" ]");
     }
 }
 
-double[,] array2D = CreateMatrixRndInt (3,4,-100,100);  // создание двухмерного массива размером 3х4 числами от -100 до 100
-PrintMatrix(array2D);                                   // печать массива
+double[,] array2D = CreateMatrixRndInt(6, 4, -100, 100);  // создание двухмерного массива размером 6х4 числами от -100 до 100
+PrintMatrix(array2D);                                     // печать массива
