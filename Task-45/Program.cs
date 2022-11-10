@@ -13,7 +13,17 @@ int[] CreateArrayRndInt(int size, int min, int max) // метод создани
     return array;
 }
 
-void PrintArray(int[] array) // метод печати массива
+void PrintArray(int[] array) // метод печати 1D массива
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {       if (i<(array.Length - 1)) Console.Write($"{array[i]}, ");
+            else Console.Write($"{array[i]}");
+    }
+    Console.Write("]");
+}
+
+void PrintArray2D(int[] array) // метод печати 2D массива
 {
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
@@ -35,6 +45,6 @@ int[] CopyMassive(int[] array) // метод копирования массив
 }
 
 int[] arr = CreateArrayRndInt(10, 0, 25);        // создаем массив
-PrintArray(arr);                                 // печатаем массив
+PrintArray2D(arr);                                 // печатаем массив
 Console.WriteLine();
 PrintArray(CopyMassive(arr));                    // печатаем копию массива
